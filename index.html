@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='./css/home.css'>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="./javascript/header.js"></script>
+    <script src="./node_modules/mailcheck/src/mailcheck.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPOS Travel</title>
+</head>
+
+<body>
+
+    <div id='contact_modal'>
+        <div id='modal'>
+            <h1 class='white_h1'>Kontaktirajte nas</h1>
+            <p class='white_p' id='posaljite_por'>Posaljite nam poruku!</p>
+            <p id='error_form'></p>
+            <hr>
+            <p class='white_p'>Ime</p>
+            <input type='text' class='input_modal' name='name' placeholder="Petar" id='name' value=''><br>
+            <p class='white_p'>Prezime</p>
+            <input type='text' class='input_modal' name='surname' placeholder="Petrovic" id='surname' value=''><br>
+            <p class='white_p'>E-mail</p>
+            <input value='' type='email' class='input_modal' name='email' placeholder="petar.petrovic@gmail.com"
+                id='email'><br>
+            <p id='error_mail'></p>
+            <p class='white_p'>Tekst poruke</p>
+            <textarea value='' type='text' class='textarea_p' id='text'></textarea><br>
+            <button id='btn_send'>POSALJI</button>
+            <button id='btn_close'>ZATVORI</button>
+        </div>
+    </div>
+    <!-- s -->
+    <!-- header here -->
+    <div id='header'>
+        <div class='logo_div'>
+
+        </div>
+        <div class='home_div' id='home_div'>
+            <div class='image_left_div'>
+
+            </div>
+            <div class='a_right_div'>
+                <p>Pocetna</p>
+            </div>
+        </div>
+        <div class='destinations_div' id="destinations">
+            <div class='image_left_div'>
+
+            </div>
+            <div class='a_right_div'>
+                <p>Destinacije</p>
+            </div>
+        </div>
+        <div class='about_div' id="about_div">
+            <div class='image_left_div'>
+
+            </div>
+            <div class='a_right_div'>
+                <p>O nama</p>
+            </div>
+        </div>
+        <div class='contact_div'>
+            <div class='image_left_div'>
+
+            </div>
+            <div class='a_right_div' id='contact_btn'>
+                <p>Kontakt</p>
+            </div>
+        </div>
+        <div class='login_div'>
+            <p class='time_p'>Trenutno vreme:<br> <span id='time'></span></p>
+
+        </div>
+    </div>
+
+    <!-- header message here -->
+    <div id='header_message'>
+
+    </div>
+
+    <!-- slider here -->
+    <div id='slider_div'>
+        <div class='cropped'>
+
+        </div>
+        <div id='central_slider_div'>
+            <div id='top_central'>
+
+            </div>
+            <div id='middle_central'>
+                <h1 class='h1_slider' id='h1_main_slider'>Zimovanje 2020/2021</h1>
+                <p class='p_slider' id='p_main_slider'>
+                    Zlatibor | Kopaonik | Tara
+                </p>
+                <button id='button_slider'><a>Saznajte vise</a></button>
+            </div>
+            <div id='bottom_central'>
+                <div id='left_bottom' class='toggler'>
+                    <img src='./images/left-arrow.png' class='slider_img' id='btn_slide_left'>
+                </div>
+                <div id='offers_div'>
+                    <div id='r1_c1'>
+
+                    </div>
+                    <div id='r1_c2' class='offer_item'>
+                        <p>PAKET<br> ARANZMANI</p>
+                    </div>
+                    <div id='r1_c3' class='offer_item'>
+                        <p>INDIVIDUALNI ARANZMANI</p>
+                    </div>
+                    <div id='r1_c4' class='offer_item'>
+                        <p>AVIO<br> KARTE</p>
+                    </div>
+                    <div id='r1_c5' class='offer_item'>
+                        <p>RENT A <br> CAR</p>
+                    </div>
+                    <div id='r1_c6'>
+
+                    </div>
+                    <div id='r2_c'>
+                        <div id='r2_c_c1'>
+
+                        </div>
+                        <div id='r2_c_c2'>
+
+                        </div>
+                        <div id='r2_c_c3'>
+
+                        </div>
+                    </div>
+                </div>
+                <div id='right_bottom' class='toggler'>
+                    <img src='./images/right-arrow.png' class='slider_img' id='btn_slide_right'>
+                </div>
+            </div>
+        </div>
+        <div class='cropped'>
+        </div>
+    </div>
+    <div class='horizontal_divider'>
+
+    </div>
+    <div id='wrapper_div'>
+        <div id='special_offers_div'>
+            <div id='he_div'>
+                <h1 class='h1_slider'>Istaknute ponude</h1>
+            </div>
+            <div id='central_offers_div'>
+                <div id='separator_div'>
+                    <div id='row_c1' class='grid_item_bordered'>
+
+                    </div>
+                    <div id='row_c2' class='grid_item_bordered'>
+                        <div id='offer1'>
+                            <div id="offer1_r1" class='grid_item_bordered'>
+                                <!-- slika_ -->
+                                <img src='./images/kapadokija.jpg' class='wide_img'>
+                            </div>
+
+                            <div id='offer1_r2' class='grid_item_bordered'>
+                                <h1 class='p_slider'>Kapadokija</h1>
+                                <hr>
+                                <p class='p_offer'>Avion - Hoteli 4*</p>
+                                <p class='p_offer'>Cena od: <span><b>150&euro;</b></span></p>
+
+                            </div>
+
+                            <div id='offer1_r3' class='grid_item_bordered'>
+                                <button class='prikazi_vise' id="btn_21">
+                                    PRIKAZI VISE
+                                </button>
+                            </div>
+                        </div>
+                        <div id='offer2'>
+                            <div id='offer2_r1' class='grid_item_bordered'>
+                                <img src='./images/instanbul.jpg' class='wide_img'>
+                            </div>
+                            <div id='offer2_r2' class='grid_item_bordered'>
+                                <h1 class='p_slider'>Istanbul</h1>
+                                <hr>
+                                <p class='p_offer'>Avion - Hoteli 4*</p>
+                                <p class='p_offer'>Cena od: <span><b>120&euro;</b></span></p>
+
+                            </div>
+                            <div id='offer2_r3' class='grid_item_bordered'>
+                                <button class='prikazi_vise' id="btn_22">
+                                    PRIKAZI VISE
+
+                                </button>
+                            </div>
+                        </div>
+                        <div id='offer3'>
+
+                            <div id='offer3_r1' class='grid_item_bordered'>
+
+                                <img src='./images/kina.jpg' class='wide_img'>
+                            </div>
+
+                            <div id='offer3_r2' class='grid_item_bordered'>
+
+                                <h1 class='p_slider'>Kina</h1>
+                                <hr>
+                                <p class='p_offer'>Avion - Hoteli 3*</p>
+                                <p class='p_offer'>Cena od: <span><b>180&euro;</b></span></p>
+                            </div>
+
+                            <div id='offer3_r3' class='grid_item_bordered'>
+                                <button class='prikazi_vise' id="btn_23">
+                                    PRIKAZI VISE
+
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id='row_c3' class='grid_item_bordered'>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='horizontal_divider'>
+
+    </div>
+
+    <!-- footer -->
+    <div id='footer'>
+        &copy; Copyright EPOS Travel
+    </div>
+
+    <script>
+        $(function () {
+
+            const slider_children = $('slider_div').children('div').addClass('grid-item');
+            if (slider_children) {
+                for (let i = 1; i < slider_children.length; i++) {
+                    slider_children[i - 1].style.gridColumnStart = i;
+                    slider_children[i - 1].style.gridColumnEnd = i + 1;
+                }
+            }
+
+            const bottom_children_offers = $('#offers_div').children('div').addClass('grid_item_2');
+
+            // slider
+            const handleClick = (event, arr) => {
+                // handle image slide
+                const image_div = $('#slider_div');
+                const current_src = image_div.css('background-image');
+                const url = current_src.slice(current_src.indexOf("\"") + 1, current_src.lastIndexOf("\""));
+
+                // get h1 and p of slider
+                const h1_slider = $('#h1_main_slider');
+                const p_slider = $('#p_main_slider');
+
+                let base_url = url.slice(0, url.lastIndexOf("/") + 1);
+                let img = url.slice(url.lastIndexOf("/") + 1, url.lastIndexOf(".jpg"));
+                switch (img) {
+                    case 'wallpaper_3': {
+                        const next_image = arr === 'right' ? './images/wallpaper_1.jpg' : './images/wallpaper_2.jpg';
+                        // image_div.css('background-image', `url(${next_image})`);
+                        image_div.fadeTo('slow', 0.5, () => {
+                            image_div.css('background-image', `url(${next_image})`);
+                            if (arr === 'right') {
+                                h1_slider.html('LETOVANJE 2020/2021');
+                                p_slider.html('Grcka | Turska | Crna Gora');
+                                $('#r2_c_c2').css('background-color', '#F77F00');
+                            } else {
+                                h1_slider.html('ODMOR U SRBIJI');
+                                p_slider.html('Banja Koviljaca | Fruske terme | Vrnjacka banja');
+                                $('#r2_c_c3').css('background-color', '#F77F00');
+                            }
+                            $('#r2_c_c1').css('background-color', '#0b6bb0');
+                            image_div.fadeTo('slow', 0.9);
+                        })
+                        break;
+                    };
+                    case 'wallpaper_2': {
+                        const next_image = arr === 'right' ? './images/wallpaper_3.jpg' : './images/wallpaper_1.jpg';
+                        // image_div.css('background-image', `url(${next_image})`);
+                        image_div.fadeTo('slow', 0.5, () => {
+                            image_div.css('background-image', `url(${next_image})`);
+                            if (arr === 'right') {
+                                h1_slider.html('ZIMOVANJE 2020/2021');
+                                p_slider.html('Zlatibor | Kopaonik | Tara');
+                                $('#r2_c_c1').css('background-color', '#F77F00');
+                            } else {
+                                h1_slider.html('LETOVANJE 2020/2021');
+                                p_slider.html('Grcka | Turska | Crna Gora');
+                                $('#r2_c_c2').css('background-color', '#F77F00');
+                            }
+                            $('#r2_c_c3').css('background-color', '#0b6bb0');
+                            image_div.fadeTo('slow', 0.9);
+                        })
+                        break;
+                    }
+                    case 'wallpaper_1': {
+                        const next_image = arr === 'right' ? './images/wallpaper_2.jpg' : './images/wallpaper_3.jpg';
+                        // image_div.css('background-image', `url(${next_image})`);
+                        image_div.fadeTo('slow', 0.5, () => {
+                            image_div.css('background-image', `url(${next_image})`);
+                            if (arr === 'right') {
+                                h1_slider.html('ODMOR U SRBIJI');
+                                p_slider.html('Banja Koviljaca | Fruske terme | Vrnjacka banja');
+                                $('#r2_c_c3').css('background-color', '#F77F00');
+                            } else {
+                                h1_slider.html('ZIMOVANJE 2020/2021');
+                                p_slider.html('Zlatibor | Kopaonik | Tara');
+                                $('#r2_c_c1').css('background-color', '#F77F00');
+                            }
+                            $('#r2_c_c2').css('background-color', '#0b6bb0');
+                            image_div.fadeTo('slow', 0.9);
+                        })
+                        break;
+                    }
+                }
+
+
+            }
+            $('#btn_slide_right').on('click', (event) => handleClick(event, 'right'));
+            $('#btn_slide_left').on('click', (event) => handleClick(event, 'left'));
+
+            const handle_directClick = (event, btn) => {
+                // handle image slide
+                const image_div = $('#slider_div');
+                const current_src = image_div.css('background-image');
+                const url = current_src.slice(current_src.indexOf("\"") + 1, current_src.lastIndexOf("\""));
+
+                // get h1 and p of slider
+                const h1_slider = $('#h1_main_slider');
+                const p_slider = $('#p_main_slider');
+
+                let base_url = url.slice(0, url.lastIndexOf("/") + 1);
+                let img = url.slice(url.lastIndexOf("/") + 1, url.lastIndexOf(".jpg"));
+                switch (btn) {
+                    case 1: {
+                        const next_image = './images/wallpaper_3.jpg';
+                        if (img === next_image) break;
+                        image_div.fadeTo('slow', 0.5, () => {
+                            image_div.css('background-image', `url(${next_image})`);
+                            h1_slider.html('ZIMOVANJE 2020/2021');
+                            p_slider.html('Zlatibor | Kopaonik | Tara');
+                            $('#r2_c_c2').css('background-color', '#0b6bb0');
+                            $('#r2_c_c3').css('background-color', '#0b6bb0');
+                            $('#r2_c_c1').css('background-color', '#F77F00');
+                            image_div.fadeTo('slow', 0.9);
+                        })
+                        break;
+                    }
+                    case 2: {
+                        const next_image = './images/wallpaper_1.jpg';
+                        if (img === next_image) break;
+                        image_div.fadeTo('slow', 0.5, () => {
+                            image_div.css('background-image', `url(${next_image})`);
+                            h1_slider.html('LETOVANJE 2020/2021');
+                            p_slider.html('Grcka | Turska | Crna Gora');
+                            $('#r2_c_c2').css('background-color', '#F77F00');
+                            $('#r2_c_c3').css('background-color', '#0b6bb0');
+                            $('#r2_c_c1').css('background-color', '#0b6bb0');
+                            image_div.fadeTo('slow', 0.9);
+                        })
+                        break;
+                    }
+                    case 3: {
+                        const next_image = './images/wallpaper_2.jpg';
+                        if (img === next_image) break;
+                        image_div.fadeTo('slow', 0.5, () => {
+                            image_div.css('background-image', `url(${next_image})`);
+                            h1_slider.html('ODMOR U SRBIJI');
+                            p_slider.html('Banja Koviljaca | Fruske terme | Vrnjacka banja');
+                            $('#r2_c_c2').css('background-color', '#0b6bb0');
+                            $('#r2_c_c3').css('background-color', '#F77F00');
+                            $('#r2_c_c1').css('background-color', '#0b6bb0');
+                            image_div.fadeTo('slow', 0.9);
+                        })
+                        break;
+                    }
+                }
+            }
+
+            $('#r2_c_c1').on('click', (event) => handle_directClick(event, 1));
+            $('#r2_c_c2').on('click', (event) => handle_directClick(event, 2));
+            $('#r2_c_c3').on('click', (event) => handle_directClick(event, 3));
+
+
+            $('#button_slider').on('click', (event) => {
+                const path = window.location.href;
+                const base_path = path.slice(0, path.lastIndexOf('ProjekatEpos/')) + 'ProjekatEpos/';
+
+                const image_div = $('#slider_div');
+                const current_src = image_div.css('background-image');
+                const url = current_src.slice(current_src.indexOf("\"") + 1, current_src.lastIndexOf("\""));
+
+                let base_url = url.slice(0, url.lastIndexOf("/") + 1);
+                let img = url.slice(url.lastIndexOf("/") + 1, url.lastIndexOf(".jpg"));
+
+                switch (img) {
+                    case 'wallpaper_1': {
+                        window.location.replace(base_path + 'destinacije/divcibare.html');
+                        break;
+                    }
+                    case 'wallpaper_2': {
+                        window.location.replace(base_path + 'destinacije/srebrno.html');
+                        break;
+                    }
+                    case 'wallpaper_3': {
+                        window.location.replace(base_path + 'destinacije/kopaonik.html');
+                        break;
+                    }
+                    default: {
+                        event.preventDefault();
+                    }
+                }
+            })
+
+        })
+
+        $('#btn_21').on('click', (e) => {
+            window.location.href = 'https://www.riopricesaputovanja.com/v1/kapadokija-vodic-za-putovanje-2020/';
+        })
+        $('#btn_22').on('click', (e) => {
+            window.location.href = 'https://www.riopricesaputovanja.com/v1/sta-vidjeti-u-istanbulu/';
+        })
+        $('#btn_23').on('click', (e) => {
+            window.location.href = 'https://www.riopricesaputovanja.com/v1/5-savjeta-kako-lakse-prezivjeti-kinu/';
+        })
+
+
+        setInterval(() => {
+            let date = new Date();
+            let seconds = date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds();
+            $('#time').html(date.getHours() + ":" + date.getMinutes() + ":" + seconds);
+        }, 1000)
+
+        $('#contact_btn').on('click', (e) => {
+            $('#header').css('filter', 'blur(5px)');
+            $('#slider_div').css('filter', 'blur(5px)');
+            $('#header_message').css('filter', 'blur(5px)');
+            $('.horizontal_divider').css('filter', 'blur(5px)');
+            $('#wrapper_div').css('filter', 'blur(5px)');
+            $('#footer').css('filter', 'blur(5px)');
+
+            $('#contact_modal').css('display', 'grid');
+            $('#contact_modal').css('grid-template-columns', '35% 1fr 35%');
+            $('#contact_modal').css('grid-template-rows', '11% 1fr 11%');
+
+        });
+
+        $('#btn_close').on('click', (e) => {
+            $('#header').css('filter', 'blur(0px)');
+            $('#slider_div').css('filter', 'blur(0px)');
+            $('#header_message').css('filter', 'blur(0px)');
+            $('.horizontal_divider').css('filter', 'blur(0px)');
+            $('#wrapper_div').css('filter', 'blur(0px)');
+            $('#footer').css('filter', 'blur(0px)');
+
+            $('#contact_modal').css('display', 'none');
+        })
+
+        $('#btn_send').on('click', (e) => {
+            const ime = $('#name').val();
+            const prezime = $('#surname').val();
+            const mail = $('#email').val();
+            const poruka = $('#text').val();
+
+
+            if (ime === '') {
+                $('#error_form').get(0).innerHTML = 'Polje za ime ne sme biti prazno!';
+                $('#posaljite_por').css('display', 'none');
+            } else if (prezime === '') {
+                $('#error_form').get(0).innerHTML = 'Polje za prezime ne sme biti prazno!';
+                $('#posaljite_por').css('display', 'none');
+            } else if (mail === '') {
+                $('#error_form').get(0).innerHTML = 'Polje za mail ne sme biti prazno!';
+                $('#posaljite_por').css('display', 'none');
+            } else {
+                $('#header').css('filter', 'blur(0px)');
+                $('#slider_div').css('filter', 'blur(0px)');
+                $('#header_message').css('filter', 'blur(0px)');
+                $('.horizontal_divider').css('filter', 'blur(0px)');
+                $('#wrapper_div').css('filter', 'blur(0px)');
+                $('#footer').css('filter', 'blur(0px)');
+
+                $('#contact_modal').css('display', 'none');
+            }
+
+        })
+
+    </script>
+    <script>
+        var domains = ['gmail.com', 'aol.com', 'hotmail.com'];
+        var secondLevelDomains = ['hotmail']
+        var topLevelDomains = ["com", "net", "org"];
+
+        var superStringDistance = function (string1, string2) {
+
+        }
+
+        $('#email').on('blur', function () {
+            console.log('blur');
+            $(this).mailcheck({
+                domains: domains,
+                secondLevelDomains: secondLevelDomains,
+                topLevelDomains: topLevelDomains,
+                distanceFunction: superStringDistance,
+                suggested: function (element, suggestion) {
+
+                    $('#error_mail').get(0).innerHTML = `Da li ste mislili ${suggestion.full}?`;
+                    console.log('I got here!');
+                },
+                empty: function (element) {
+                    //     $('#error_mail').get(0).innerHTML = 'Nismo uspeli da nadjemo preporuku'
+                    console.log(element.val());
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
